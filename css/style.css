@@ -1,0 +1,397 @@
+/*Fonts*/
+@font-face {
+  font-family: "Cuprum";
+  src: local("Cuprum"),
+     url("../fonts/cuprum.woff2") format("woff2"),
+     url("../fonts/cuprum.woff") format("woff");
+}
+
+@font-face {
+  font-family: "PT Sans" ;
+  src: local("PT Sans"), local("PTSans"),
+     url("../fonts/ptsans.woff2") format("woff2"),
+     url("../fonts/ptsans.woff") format("woff");
+}
+
+/*Variables*/
+
+:root {
+  /*basic*/
+  --basic-background: #F1F5F7;
+  --basic-background-blue: #293449;
+  --basic-background-gray: #F9F5F0;
+  --basic-black: #000000;
+  --basic-white: #ffffff;
+  --basic-blue: #32425C;
+  --basic-red: #EE3643;
+  --basic-green: #63A63E;
+  --basic-gold: #FFD180;
+  --basic-grey: #3D546F;
+  --basic-greylight: #C5C5C5;
+/*specials*/
+  --special-yellow: #FFBF47;
+  --special-blue: #3BBCE3;
+  --special-lilac: #DC91D8;/*лиловый цвет*/
+  --special-greenlight: #8ED78F;
+  --special-yellowlight: #FFC047;
+  /*active, hover, focus*/
+  --hover-red: #CA2C37;
+  --hover-greylight: rgba(197, 197, 197, 0.3);
+  --active-green: #518534;
+  --active-bg-blue: #1D2739;
+  --active-red: #BA2732;
+  --active-blue: #161D29;
+  --active-white: rgba(255, 255, 255, 0.5);
+  --active-gray: rgba(241, 245, 247, 0.5);
+  --active-gold: rgba(255, 209, 128, 0.5);
+  --delete: #A9A9A9;
+  --success: #5FBB2D;
+}
+
+/*Global*/
+body {
+  min-width: 960px;
+  margin: 0;
+  padding: 0;
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  background-color: var(--basic-white);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.button {
+  background-color: var(--basic-red);
+  color: var(--basic-white);
+}
+/*активная составляющая кнопок*/
+/*наведение*/
+.button:hover,
+.button:focus {
+  background-color: var(--hover-red);
+}
+/*клик по кнопке*/
+.button:active {
+  background-color: var(--active-red);
+}
+/*Секционные заголовки*/
+.section-title {
+  color: var(--basic-blue);
+  font-size: 30px;
+  line-height: 30px;
+}
+/*Другие заголовки*/
+.title {
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
+  color: var(--basic-black);
+}
+
+/*header*/
+.main-header {
+  background-color: var(--basic-background);
+}
+/*обертка для хедера*/
+.header-wrap {
+  background-color: var(--basic-background-blue);
+  color: var(--basic-white);
+}
+/*логотип в хедере*/
+.header-wrap .logo {
+  background-color: var(--basic-red);
+}
+/*активная составляющая*/
+.header-link:active {
+
+}
+/*ссылка на оформление заказа*/
+.header-wrap .order-link {
+  background-color: var(--basic-green);
+  color: inherit;
+}
+/*активная составляющая*/
+/*наведение*/
+.order-link:hover,
+.order-link:focus {
+  background-color: var(--success);
+}
+/*клик по ссылке*/
+.order-link:active {
+  background-color: var(--basic-green);
+  color: var(--active-white);
+}
+/*блок с описанием*/
+.header-description {
+  color: var(--basic-red);
+}
+/*абзац с описанием в заголовке*/
+.header-description p {
+  font-size: 16px;
+  line-height: 23px;
+}
+/*ссылка на номер телефона*/
+.phone-link {
+  color: inherit;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 30px;
+}
+/*адрес в заголовке*/
+.header-contacts p {
+  color: var(--basic-blue);
+  font-size: 14px;
+}
+/*ссылки на вход и регистрацию*/
+.entrance {
+  color: var(--basic-black);
+  font-size: 21px;
+  line-height: 21px;
+  background-color: var(--basic-white);
+}
+/*активная составляющая*/
+/*наведение на ссылки*/
+.entrance:hover,
+.entrance:focus {
+  color: var(--basic-red);
+}
+/*клик по ссылкам*/
+.entrance:active {
+  color: var(--basic-greylight);
+}
+/*главное меню*/
+.header-nav {
+  background-color: var(--basic-blue);
+}
+/*элементы меню*/
+.site-navigation-item a {
+  color: var(--basic-white);
+}
+/*активная составляющая*/
+/*наведение курсора*/
+.site-navigation-item a:hover,
+.site-navigation-item a:focus {
+  background-color: var(--basic-background-blue);
+}
+/*клик по ссылке*/
+.site-navigation-item a:active {
+  background-color: var(--active-bg-blue);
+  color: var(--active-white);
+}
+/*main*/
+/*элементы списка предложений*/
+.offers-list-item {
+  color: var(--basic-white);
+}
+/*активная составляющая*/
+/*наведение*/
+.offers-list-item a:hover,
+.offers-list-item a:focus {
+  background-color: var(--hover-greylight);
+}
+/*клик по ссылке*/
+.offers-list-item a:active {
+  background-color: var(--delete);
+}
+/*описание предложения*/
+.offers-list-item p {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+}
+/*ссылка в предложении*/
+.offers-link {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: inherit;
+}
+/*блоки предложений*/
+.offers-list-item:nth-child(1) {
+  background-color: var(--special-yellow);
+}
+
+.offers-list-item:nth-child(2) {
+  background-color: var(--special-blue);
+}
+
+.offers-list-item:nth-child(3) {
+  background-color: var(--special-lilac);
+}
+
+.offers-list-item:nth-child(4) {
+  background-color: var(--special-greenlight);
+}
+
+.offers-list-item:nth-child(5) {
+  background-color: var(--special-yellowlight);
+}
+
+/*catalog*/
+.catalog-wrap {
+  background-color: var(--basic-background-gray);
+}
+/*элементы списка*/
+.catalog-link {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 700;
+  line-height: 20px;
+  color: var(--basic-black);
+}
+/*свойства для ссылок и кнопок*/
+.catalog-buy {
+  background-color: var(--basic-green);
+  color: var(--basic-white);
+}
+.catalog-button {
+
+}
+/*активная составляющая*/
+/*наведение*/
+.catalog-buy:hover,
+.catalog-buy:focus {
+  background-color: var(--success);
+}
+/*клик по ссылке*/
+.catalog-buy:active {
+  background-color: var(--active-green);
+}
+/*зачеркнутая цена в списке*/
+.catalog-list del {
+  color: var(--delete);
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 700;
+}
+/*подсвеченная цена в списке*/
+.price {
+  background-color: var(--basic-red);
+  color: var(--basic-white);
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+/*brands*/
+.brands-list li {
+  background-color: var(--basic-white);
+}
+
+/*services*/
+
+/*абзацы описания сервисов*/
+.services p {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 400;
+}
+/*список выбора сервисов*/
+.services-item {
+  background-color: var(--basic-blue);
+  color: var(--basic-white);
+}
+/*элементы списка*/
+.services-link {
+  font-size: 21px;
+  line-height: 30px;
+  font-weight: 700;
+  color: inherit;
+}
+/*активная составляющая*/
+/*наведение*/
+.services-link:hover,
+.services-link:focus {
+  background-color: var(--basic-background-blue);
+  color: var(--basic-white);
+}
+/*индикатор активности*/
+.services-link:active {
+  background-color: var(--basic-white);
+  color: var(--basic-background-blue);
+}
+/*заголовки сервисов*/
+.services-header {
+  font-size: 30px;
+  line-height: 30px;
+  color: var(--basic-blue);
+}
+/*description*/
+/*абзацы разделов*/
+.description p {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+/*footer*/
+.footer-page {
+  background-color: var(--basic-blue);
+  color: var(--basic-background);
+}
+/*меню в футере*/
+.footer-menu-item a {
+  color: inherit;
+}
+/*активная составляющая*/
+/*наведение*/
+.footer-menu-item a:hover,
+.footer-menu-item a:focus,
+.footer-submenu-item a:hover,
+.footer-submenu-item a:focus
+{
+  /*text-decoration: underline*/
+}
+/*клик*/
+.footer-menu-item a:active
+ {
+  color: var(--active-gray);
+}
+/*подменю в футере*/
+.footer-submenu-item a {
+  color: var(--basic-gold);
+}
+/*клик по ссылке*/
+.footer-submenu-item a:active {
+  color: var(--active-gold);
+}
+/*блок с обратной связью*/
+.footer-feedback {
+  background-color: var(--basic-background-blue);
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+}
+/*элементы списка соц сетей*/
+.social-list-item a {
+  color: inherit;
+}
+/*активная составляющая*/
+/*наведение и клик по ссылке*/
+.social-list-item a:hover,
+.social-list-item a:focus,
+.social-list-item a:active {
+  background-color: var(--basic-red);
+}
+
+/*обратная связь*/
+.footer-copyright a {
+  color: var(--basic-gold);
+}
+
+/*акивная составляющая*/
+/*наведение*/
+.footer-copyright a:hover,
+.footer-copyright a:focus {
+  /*text-decoration: underline*/
+}
+/*клик по ссылке*/
+.footer-copyright a:active {
+  color: var(--basic-red);
+}
