@@ -10,14 +10,14 @@
 
 <body>
   <header class="main-header">
-    <div class="header-wrap">
+    <div class="header-container">
       <a class="logo">
         <img src="https://via.placeholder.com/150x100" alt="Логотип сайта Интернет-магазина Техномарт">
       </a>
       <form>
         <!--Форма поиска method="get"-->
       </form>
-      <ul class="header-wrap-menu">
+      <ul class="header-container-menu">
         <li>
           <a class="header-link header-marker" href="">Закладки: <span>0</span></a>
         </li>
@@ -34,8 +34,8 @@
         <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
       </div>
       <div class="header-entrance">
-        <a class="entrance entrance-link" href="">Войти</a>
-        <a class="entrance registration-link" href="">Регистрация</a>
+        <a class="header-entrance-link" href="">Войти</a>
+        <a class="header-registration-link" href="">Регистрация</a>
       </div>
     </div>
     <nav class="header-nav">
@@ -51,10 +51,10 @@
     </nav>
   </header>
   <main class="container">
-    <h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
+    <h1 class="visually-hidden">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
 
     <section class="offers">
-      <h2>Наши предложения</h2>
+      <h2 class="visually-hidden">Наши предложения</h2>
       <ul class="offers-list">
         <li class="offers-list-item">
           <p>Материалы</p>
@@ -77,13 +77,20 @@
           <a class="offers-link" href="">бесплатно</a>
         </li>
       </ul>
-      <figure class="slider">
-        <a href="">
-          <img src="https://via.placeholder.com/150x100" alt="Демонстрация работы перфоратора">
-        </a>
-      </figure>
-      <button class="arrow arrow-left" type="button" disabled>Назад</button>
-      <button class="arrow arrow-right" type="button">Вперед</button>
+      <div class="carousel">
+        <ul class="carousel-list">
+          <li class="carousel-inner active">
+            <img src="https://via.placeholder.com/150x100" alt="Демонстрация работы перфоратора">
+          </li>
+          <li class="carousel-inner">
+            <h3 class="carousel-header">Дрели</h3>
+            <p class="carousel-description">Соседям на радость!</p>
+            <img src="https://via.placeholder.com/150x100" alt="Демонстрация работы дрели">
+          </li>
+        </ul>
+      </div>
+      <button class="button-arrow-left" type="button" disabled>Назад</button>
+      <button class="button-arrow-right" type="button">Вперед</button>
       <a class="button" href="catalog.html">Открыть каталог</a>
     </section>
 
@@ -94,12 +101,12 @@
       </div>
       <ul class="catalog-list">
         <li class="catalog-list-item">
-          <article>
+          <article class="catalog-card">
             <a class="catalog-link" href="">
               <h3>Перфоратор BOSCH<br> BFG 9000</h3>
               <img src="https://via.placeholder.com/150x100" alt="Перфоратор bfg9000">
             </a>
-            <div class="catalog-hidden">
+            <div class="catalog-card-events-list">
               <a class="catalog-buy" href="">Купить</a>
               <button class="catalog-button" type="button">В закладки</button>
             </div>
@@ -108,12 +115,12 @@
           </article>
         </li>
         <li class="catalog-list-item">
-          <article>
+          <article class="catalog-card">
             <a class="catalog-link" href="">
               <h3>Перфоратор BOSCH<br> BFG 3000</h3>
               <img src="https://via.placeholder.com/150x100" alt="Перфоратор bfg3000">
             </a>
-            <div class="catalog-hidden">
+            <div class="catalog-card-events-list">
               <a class="catalog-buy" href="">Купить</a>
               <button class="catalog-button" type="button">В закладки</button>
             </div>
@@ -122,12 +129,12 @@
           </article>
         </li>
         <li class="catalog-list-item">
-          <article>
+          <article class="catalog-card">
             <a class="catalog-link" href="">
               <h3>Перфоратор BOSCH<br> BFG 6000</h3>
               <img src="https://via.placeholder.com/150x100" alt="Перфоратор bfg6000">
             </a>
-            <div class="catalog-hidden">
+            <div class="catalog-card-events-list">
               <a class="catalog-buy" href="">Купить</a>
               <button class="catalog-button" type="button">В закладки</button>
             </div>
@@ -136,12 +143,12 @@
           </article>
         </li>
         <li class="catalog-list-item">
-          <article>
+          <article class="catalog-card">
             <a class="catalog-link" href="">
               <h3>Перфоратор BOSCH<br> BFG 2000</h3>
               <img src="https://via.placeholder.com/150x100" alt="Перфоратор bfg2000">
             </a>
-            <div class="catalog-hidden">
+            <div class="catalog-card-events-list">
               <a class="catalog-buy" href="">Купить</a>
               <button class="catalog-button" type="button">В закладки</button>
             </div>
@@ -231,7 +238,7 @@
     </section>
 
     <section class="description">
-      <h2>Описание и контакты</h2>
+      <h2 class="visually-hidden">Описание и контакты</h2>
       <section class="about">
         <h3 class="title">Компания &quot;Техномарт&quot;</h3>
         <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
@@ -256,7 +263,7 @@
 
   <footer class="footer-page">
     <section class="footer-navigation">
-    <h2>Дополнительная навигация</h2>
+    <h2 class="visually-hidden">Дополнительная навигация</h2>
       <a class="logo">
         <img src="https://via.placeholder.com/150x100" alt="Логотип сайта Интернет-магазина Техномарт">
       </a>
@@ -283,13 +290,13 @@
         </div>
         <ul class="social-list">
           <li class="social-list-item">
-            <a href="">Вконтакте</a>
+            <a class="visually-hidden" href="">Вконтакте</a>
           </li>
           <li class="social-list-item">
-            <a href="">Facebook</a>
+            <a class="visually-hidden" href="">Facebook</a>
           </li>
           <li class="social-list-item">
-            <a href="">Instagram</a>
+            <a class="visually-hidden" href="">Instagram</a>
           </li>
         </ul>
         <div>
@@ -308,14 +315,14 @@
   </footer>
 
   <section class="modal modal-feedback">
-    <h2>Форма обратной связи</h2>
+    <h2 class="visually-hidden">Форма обратной связи</h2>
     <!--Здесь будет форма обратной связи-->
     <button class="button" type="submit">Отправить</button>
     <button class="modal-close" type="button">Закрыть</button>
   </section>
 
   <section class="modal modal-map">
-    <h2>Карта</h2>
+    <h2 class="visually-hidden">Карта</h2>
     <!--Здесь будет карта-->
     <button class="modal-close" type="button">Закрыть</button>
   </section>
