@@ -20,6 +20,8 @@
   --basic-background: #F1F5F7;
   --basic-background-blue: #293449;
   --basic-background-gray: #F9F5F0;
+  --background-blue: #F2F6F8;
+  --background-beige: #F7F3EC;
   --basic-black: #000000;
   --basic-white: #ffffff;
   --basic-blue: #32425C;
@@ -34,6 +36,7 @@
   --special-lilac: #DC91D8;/*лиловый цвет*/
   --special-greenlight: #8ED78F;
   --special-yellowlight: #FFC047;
+  --special-black: rgba(0, 0, 0, 0.3);
   /*active, hover, focus*/
   --hover-red: #CA2C37;
   --hover-greylight: rgba(197, 197, 197, 0.3);
@@ -93,6 +96,18 @@ img {
   font-weight: 400;
   color: var(--basic-black);
 }
+/*visually-hidden*/
+/*
+.visually-hidden {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+*/
 
 /*header*/
 .main-header {
@@ -204,6 +219,21 @@ img {
   color: var(--active-white);
 }
 /*main*/
+/*breadcrumbs*/
+.breadcrumbs-list {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  color: var(--basic-black);
+  text-transform: uppercase;
+}
+/*элементы списка хлебных крошек*/
+.breadcrumbs-list a {
+  color: inherit;
+  text-decoration: none;
+}
+
 /*список*/
 .offers-list {
   padding: 0;
@@ -278,6 +308,52 @@ img {
 .catalog-wrap {
   background-color: var(--basic-background-gray);
 }
+/*заголовок каталога*/
+.catalog-header {
+  background-color: var(--background-blue);
+}
+/*заголовки*/
+.catalog-title {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  color: var(--basic-black);
+  text-transform: uppercase;
+}
+/*фильтры и сортировка каталога*/
+.catalog-filters,
+.catalog-sorting-wrap {
+  background-color: var(--background-beige);
+}
+/*список сортировки*/
+.catalog-sorting-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+/*элементы списка сортировки*/
+.catalog-sorting-item a {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: 1px dotted var(--basic-red);
+  color: var(--special-black);
+}
+/*активная составляющая*/
+.catalog-sorting-item a:hover,
+.catalog-sorting-item a:focus {
+  color: var(--basic-black);
+  border-bottom: 1px solid var(--basic-red);
+}
+/*индикатор активности*/
+.catalog-sorting-item a:active {
+  color: var(--basic-red);
+  border-bottom: none;
+}
 /*список каталога*/
 .catalog-list {
   padding: 0;
@@ -325,6 +401,22 @@ img {
   font-size: 17px;
   line-height: 18px;
   font-weight: 700;
+}
+/*pagination*/
+.pagination-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+/*элементы пагинации*/
+.pagination-list a {
+  font-style: "PT Sans", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  color: var(--basic-black);
+  text-transform: uppercase;
+  text-decoration: none;
 }
 
 /*brands*/
