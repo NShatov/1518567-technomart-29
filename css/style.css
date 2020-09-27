@@ -125,8 +125,18 @@ img {
   margin: 0;
   list-style: none;
 }
+/*оформление логотипа в хедере*/
+.header-logo {
+  background-color: var(--basic-red);
+  box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+  padding: 12px 55px 17px;
+  display: inline-block;
+  vertical-align: center;
+}
 /*активная составляющая для логотипа*/
-.header-container .logo:active {
+.header-logo:active {
+  background-color: var(--active-red);
+  box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
 
 }
 .header-link {
@@ -271,22 +281,37 @@ img {
 }
 /*блоки предложений*/
 .offers-list-item:nth-child(1) {
+  background-image: url("../img/icon-1.png");
+  background-position: 10% 50%;
+  background-repeat: no-repeat;
   background-color: var(--special-yellow);
 }
 
 .offers-list-item:nth-child(2) {
+  background-image: url("../img/icon-2.png");
+  background-position: 10% 50%;
+  background-repeat: no-repeat;
   background-color: var(--special-blue);
 }
 
 .offers-list-item:nth-child(3) {
+  background-image: url("../img/icon-3.png");
+  background-position: 10% 50%;
+  background-repeat: no-repeat;
   background-color: var(--special-lilac);
 }
 
 .offers-list-item:nth-child(4) {
+  background-image: url("../img/icon-4.png");
+  background-position: 10% 50%;
+  background-repeat: no-repeat;
   background-color: var(--special-greenlight);
 }
 
 .offers-list-item:nth-child(5) {
+  background-image: url("../img/icon-5.png");
+  background-position: 10% 50%;
+  background-repeat: no-repeat;
   background-color: var(--special-yellowlight);
 }
 /*Карусель*/
@@ -488,6 +513,25 @@ img {
   line-height: 30px;
   color: var(--basic-blue);
 }
+/*добавление фоновых изображений*/
+.delivery {
+  background-image: url(../img/delivery.png);
+  background-position: 10% 30%;
+  background-repeat: no-repeat;
+}
+
+.guarantee {
+  background-image: url(../img/guarantee.png);
+  background-position: 10% 0%;
+  background-repeat: no-repeat;
+}
+
+.credit {
+  background-image: url(../img/credit.png);
+  background-position: 10% 30%;
+  background-repeat: no-repeat;
+}
+
 /*description*/
 /*абзацы разделов*/
 .description p {
