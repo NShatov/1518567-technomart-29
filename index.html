@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Техномарт</title>
@@ -8,34 +8,40 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="page-body">
   <header class="main-header">
     <div class="header-container">
-      <a class="header-logo">
-        <img src="img/logo-technomart.svg" width="108" height="18" alt="ТЕХНОМАРТ">
-      </a>
-      <form>
-        <!--Форма поиска method="get"-->
-      </form>
-      <ul class="header-container-menu">
-        <li>
-          <a class="header-link header-marker" href="">Закладки: <span>0</span></a>
-        </li>
-        <li>
-          <a class="header-link header-basket" href="">Корзина: <span>0</span></a>
-        </li>
-      </ul>
-      <a class="order-link" href="">Оформить заказ</a>
+      <div class="header-container-wrapper">
+        <a class="header-logo">
+          <img src="img/logo-technomart.svg" width="108" height="18" alt="ТЕХНОМАРТ">
+        </a>
+        <div class="search">
+          <form>
+            <input type="text" name="search" placeholder="Поиск">
+          </form>
+        </div>
+        <ul class="header-container-menu">
+          <li>
+            <a class="header-link header-marker" href="">Закладки: <span>0</span></a>
+          </li>
+          <li>
+            <a class="header-link header-basket" href="">Корзина: <span>0</span></a>
+          </li>
+        </ul>
+        <a class="order-link" href="">Оформить заказ</a>
+      </div>
     </div>
     <div class="header-description">
-      <p>Интернет-магазин<br> строительных материалов<br> и инструментов для ремонта</p>
-      <div class="header-contacts">
-        <a class="phone-link" href="tel:+78125550555">+7 (812) 555-05-55</a>
-        <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-      </div>
-      <div class="header-entrance">
-        <a class="header-entrance-link" href="">Войти</a>
-        <a class="header-registration-link" href="">Регистрация</a>
+      <div class="header-description-wrapper">
+        <p>Интернет-магазин<br> строительных материалов<br> и инструментов для ремонта</p>
+        <div class="header-contacts">
+          <a class="phone-link" href="tel:+78125550555">+7 (812) 555-05-55</a>
+          <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+        </div>
+        <div class="header-entrance">
+          <a class="header-entrance-link" href="">Войти</a>
+          <a class="header-registration-link" href="">Регистрация</a>
+        </div>
       </div>
     </div>
     <nav class="header-nav">
@@ -50,51 +56,56 @@
       </ul>
     </nav>
   </header>
-  <main class="container">
+  <main>
     <h1 class="visually-hidden">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
 
-    <section class="offers">
-      <h2 class="visually-hidden">Наши предложения</h2>
-      <ul class="offers-list">
-        <li class="offers-list-item">
-          <p>Материалы</p>
-          <a class="offers-link" href="">на любой вкус</a>
-        </li>
-        <li class="offers-list-item">
-          <p>Инструмент</p>
-          <a class="offers-link" href="">на все случаи</a>
-        </li>
-        <li class="offers-list-item">
-          <p>Техника</p>
-          <a class="offers-link" href="">для стройки</a>
-        </li>
-        <li class="offers-list-item">
-          <p>Скидки 50%</p>
-          <a class="offers-link" href="">на 350 товаров</a>
-        </li>
-        <li class="offers-list-item">
-          <p>Доставка</p>
-          <a class="offers-link" href="">бесплатно</a>
-        </li>
-      </ul>
+    <section class="offers container">
+      <div class="offers-wrapper">
+        <h2 class="visually-hidden">Наши предложения</h2>
+        <ul class="offers-list">
+          <li class="offers-list-item">
+            <p>Материалы</p>
+            <a class="offers-link" href="">на любой вкус</a>
+          </li>
+          <li class="offers-list-item">
+            <p>Инструмент</p>
+            <a class="offers-link" href="">на все случаи</a>
+          </li>
+          <li class="offers-list-item">
+            <p>Техника</p>
+            <a class="offers-link" href="">для стройки</a>
+          </li>
+          <li class="offers-list-item">
+            <p>Скидки 50%</p>
+            <a class="offers-link" href="">на 350 товаров</a>
+          </li>
+          <li class="offers-list-item">
+            <p>Доставка</p>
+            <a class="offers-link" href="">бесплатно</a>
+          </li>
+        </ul>
+      </div>
       <div class="carousel">
         <ul class="carousel-list">
           <li class="carousel-inner active">
             <img src="img/perforator.jpg" width="620" height="266" alt="Демонстрация работы перфоратора">
           </li>
+          <!--
           <li class="carousel-inner">
             <h3 class="carousel-header">Дрели</h3>
             <p class="carousel-description">Соседям на радость!</p>
             <img src="img/drill.jpg" width="620" height="266" alt="Демонстрация работы дрели">
-          </li>
+          </li>-->
         </ul>
-      </div>
+
+      <!--
       <button class="button-arrow-left" type="button" disabled>Назад</button>
       <button class="button-arrow-right" type="button">Вперед</button>
-      <a class="button" href="catalog.html">Открыть каталог</a>
+      <a class="button" href="catalog.html">Открыть каталог</a>-->
+      </div>
     </section>
 
-    <section class="catalog">
+    <section class="catalog container">
       <div class="catalog-wrap">
         <h2 class="section-title">Популярные товары:</h2>
         <a class="button" href="catalog.html">Все популярные товары</a>
@@ -158,7 +169,7 @@
       </ul>
     </section>
 
-    <section class="brands">
+    <section class="brands container">
       <div class="brands-wrap">
         <h2 class="section-title">Популярные производители:</h2>
         <a class="button" href="">Все производители</a>
@@ -208,37 +219,40 @@
     </section>
 
     <section class="services">
-      <h2 class="title">Сервисы</h2>
-        <p>Хороший интернет-магазин отличается от плохого не только ценами!</p>
-        <p>Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
-        <ul class="services-list">
-          <li class="services-item">
-            <a class="services-link" href="">Доставка</a>
-          </li>
-          <li class="services-item">
-            <a class="services-link" href="">Гарантия</a>
-          </li>
-          <li class="services-item">
-            <a class="services-link" href="">Кредит</a>
-          </li>
-        </ul>
-        <div class="services-section delivery services-hidden">
-          <h3 class="services-header">Доставка</h3>
-          <p>Мы с удовольствием доставим ваш товар прямо<br> к вашему подъезду совершенно бесплатно!<br> Ведь мы неплохо заработаем,<br> поднимая его на ваш этаж!</p>
-        </div>
-        <div class="services-section guarantee services-active">
-          <h3 class="services-header">Гарантия</h3>
-          <p>Если купленный у нас товар поломается или заискрит,<br> а также в случае пожара, спровоцированного его<br> возгоранием,  вы всегда можете быть уверены в нашей<br> гарантии. Мы обменяем сгоревший товар на новый.<br> Дом уж восстановите как-нибудь сами.</p>
-        </div>
-        <div class="services-section credit services-hidden">
-          <h3 class="services-header">Кредит</h3>
-          <p>Залезть в долговую яму стало проще!<br> Кредитные консультанты придут к вам на помощь.</p>
-          <a class="button" href="">Отправить заявку</a>
+      <div class="services-wrapper">
+        <h2 class="title">Сервисы</h2>
+          <p>Хороший интернет-магазин отличается от плохого не только ценами!</p>
+          <p>Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
+          <ul class="services-list">
+            <li class="services-item">
+              <a class="services-link" href="">Доставка</a>
+            </li>
+            <li class="services-item">
+              <a class="services-link" href="">Гарантия</a>
+            </li>
+            <li class="services-item">
+              <a class="services-link" href="">Кредит</a>
+            </li>
+          </ul>
+          <div class="services-section delivery services-hidden">
+            <h3 class="services-header">Доставка</h3>
+            <p>Мы с удовольствием доставим ваш товар прямо<br> к вашему подъезду совершенно бесплатно!<br> Ведь мы неплохо заработаем,<br> поднимая его на ваш этаж!</p>
+          </div>
+          <div class="services-section guarantee services-active">
+            <h3 class="services-header">Гарантия</h3>
+            <p>Если купленный у нас товар поломается или заискрит,<br> а также в случае пожара, спровоцированного его<br> возгоранием,  вы всегда можете быть уверены в нашей<br> гарантии. Мы обменяем сгоревший товар на новый.<br> Дом уж восстановите как-нибудь сами.</p>
+          </div>
+          <div class="services-section credit services-hidden">
+            <h3 class="services-header">Кредит</h3>
+            <p>Залезть в долговую яму стало проще!<br> Кредитные консультанты придут к вам на помощь.</p>
+            <a class="button" href="">Отправить заявку</a>
+          </div>
         </div>
     </section>
 
-    <section class="description">
-      <h2 class="visually-hidden">Описание и контакты</h2>
+
+
+    <div class="index-columns">
       <section class="about">
         <h3 class="title">Компания &quot;Техномарт&quot;</h3>
         <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
@@ -257,8 +271,7 @@
         <img src="img/map.jpg" width="300" height="158" alt="Карта">
         <a class="button" href="">Заблудились? Напишите нам!</a>
       </section>
-
-    </section>
+    </div>
   </main>
 
   <footer class="footer-page">
@@ -323,7 +336,7 @@
 
   <section class="modal modal-map">
     <h2 class="visually-hidden">Карта</h2>
-    <img src="img/map_popup.jpg" width="970" height="477">
+    <img src="img/map_popup.jpg" width="970" height="477" alt="Схема проезда">
     <button class="modal-close" type="button">Закрыть</button>
   </section>
 
