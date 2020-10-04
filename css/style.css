@@ -101,7 +101,10 @@ img {
   font-weight: 400;
   color: var(--basic-blue);
   font-size: 30px;
+  text-transform: uppercase;
   line-height: 30px;
+  margin: 0;
+  padding: 30px;
 }
 /*Другие заголовки*/
 .title {
@@ -223,6 +226,7 @@ img {
 /*блок с описанием*/
 .header-description {
   color: var(--basic-red);
+  padding: 40px 0;
 }
 /*блок-обертка для описания*/
 .header-description-wrapper {
@@ -230,7 +234,6 @@ img {
   grid-template-columns: repeat(3, 1fr);
   width: 940px;
   margin: 0 auto;
-  padding: 41px 0;
 }
 /*абзац с описанием в заголовке*/
 .header-description p {
@@ -312,6 +315,9 @@ img {
 /*main*/
 /*breadcrumbs*/
 .breadcrumbs-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -325,24 +331,31 @@ img {
   text-decoration: none;
 }
 
-
 /*offers*/
 .offers-wrapper {
-  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
 }
+
 /*список*/
 .offers-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
   grid-template-areas:
-  "yellow blue lilac"
-  "slider slider green"
-  "slider slider gold";
+    "yellow blue lilac"
+    "carousel carousel green"
+    "carousel carousel gold";
   grid-gap: 20px;
   padding: 0;
   margin: 0;
   list-style: none;
+}
+
+.offers-list:before {
+  content: '';
+  grid-area: carousel;
 }
 
 /*элементы списка предложений*/
@@ -426,12 +439,9 @@ img {
   grid-area: gold;
 }
 
-.offers-list-item:nth-child(6) {
-  grid-area: slider;
-}
 /*Карусель*/
 .carousel {
-  position: relative;
+  position: relative;/*временно*/
   top: -265px;
 }
 .carousel-list {
@@ -439,7 +449,9 @@ img {
   margin: 0;
   list-style: none;
 }
-
+.carousel-inner {
+  grid-area: carousel;
+}
 .carousel-header {
   font-size: 36px;
   line-height: 36px;
@@ -456,6 +468,14 @@ img {
   display: grid;
   grid-template-columns: 1fr auto;
   background-color: var(--basic-background-gray);
+  box-sizing: border-box;
+}
+
+.catalog-header {
+  background-color: var(--background-blue)
+}
+.catalog .button {
+  margin: 25px 15px;
 }
 
 /*заголовки*/
@@ -503,7 +523,6 @@ img {
 .catalog-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
- /* grid-template-rows: repeat(3, 1fr);*/
   grid-gap: 20px;
   padding: 0;
   margin: 20px 0 70px 0;
@@ -524,15 +543,19 @@ img {
   color: var(--basic-black);
   text-decoration: none;
 }
+
+.catalog-page .catalog-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
 /*свойства для ссылок и кнопок*/
 .catalog-buy {
   background-color: var(--basic-green);
   color: var(--basic-white);
   text-decoration: none;
 }
-.catalog-button {
 
-}
 /*активная составляющая*/
 /*наведение*/
 .catalog-buy:hover,
@@ -586,6 +609,9 @@ img {
   margin: 20px 0 70px 0;
   list-style: none;
 }
+.brands .button {
+  margin: 25px 15px;
+}
 .brands-list li {
   background-color: var(--basic-white);
 }
@@ -619,8 +645,16 @@ img {
 /*строим сетку для блока*/
 .services-wrapper {
   display: grid;
-  grid-template-columns:
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "description description"
+    "list section";
+    grid-gap: 40px 80px;
+}
 
+.services-description {
+  grid-area: description;
 }
 /*абзацы описания сервисов*/
 .services h2 {
@@ -631,10 +665,10 @@ img {
   font-size: 13px;
   line-height: 24px;
   font-weight: 400;
-  margin-top:
 }
 /*список*/
 .services-list {
+  grid-area: list;
   width: 240px;
   padding: 0;
   margin: 0;
@@ -647,6 +681,9 @@ img {
 }
 /*элементы списка*/
 .services-link {
+  display: block;
+  padding: 14px 20px 18px 22px;
+  box-sizing: border-box;
   font-size: 21px;
   line-height: 30px;
   font-weight: 700;
@@ -665,10 +702,16 @@ img {
   background-color: var(--basic-white);
   color: var(--basic-background-blue);
 }
+
+.services-section {
+  grid-area: section;
+}
 /*заголовки сервисов*/
 .services-header {
+  text-transform: uppercase;
   font-size: 30px;
   line-height: 30px;
+  font-weight: 400;
   color: var(--basic-blue);
 }
 /*добавление фоновых изображений*/
