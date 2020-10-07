@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <title>HTML Academy: Техномарт</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Cuprum:wght@400;700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
@@ -114,10 +115,12 @@
       <ul class="catalog-list">
         <li class="catalog-list-item">
           <article class="catalog-card">
-            <a class="catalog-link" href="">
+            <div class="catalog-grid">
               <h3>Перфоратор BOSCH<br> BFG 9000</h3>
-              <img src="img/bosh_bfg_9000.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 9000">
-            </a>
+              <a class="catalog-link" href="">
+                <img src="img/bosh_bfg_9000.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 9000">
+              </a>
+            </div>
             <div class="catalog-card-events-list">
               <a class="catalog-buy" href="">Купить</a>
               <button class="catalog-button" type="button">В закладки</button>
@@ -128,10 +131,12 @@
         </li>
         <li class="catalog-list-item">
           <article class="catalog-card">
-            <a class="catalog-link" href="">
+            <div class="catalog-grid">
               <h3>Перфоратор BOSCH<br> BFG 3000</h3>
-              <img src="img/bosh_bfg_3000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
-            </a>
+              <a class="catalog-link" href="">
+                <img src="img/bosh_bfg_3000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
+              </a>
+            </div>
             <div class="catalog-card-events-list">
               <a class="catalog-buy" href="">Купить</a>
               <button class="catalog-button" type="button">В закладки</button>
@@ -142,10 +147,12 @@
         </li>
         <li class="catalog-list-item">
           <article class="catalog-card">
-            <a class="catalog-link" href="">
+            <div class="catalog-grid">
               <h3>Перфоратор BOSCH<br> BFG 6000</h3>
-              <img src="img/bosh_bfg_6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
-            </a>
+              <a class="catalog-link" href="">
+                <img src="img/bosh_bfg_6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
+              </a>
+            </div>
             <div class="catalog-card-events-list">
               <a class="catalog-buy" href="">Купить</a>
               <button class="catalog-button" type="button">В закладки</button>
@@ -156,14 +163,17 @@
         </li>
         <li class="catalog-list-item">
           <article class="catalog-card">
-            <a class="catalog-link" href="">
+            <div class="catalog-grid">
               <h3>Перфоратор BOSCH<br> BFG 2000</h3>
-              <img src="img/bosh_bfg_2000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
-            </a>
+              <a class="catalog-link" href="">
+                <img src="img/bosh_bfg_2000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
+              </a>
+            </div>
             <div class="catalog-card-events-list">
               <a class="catalog-buy" href="">Купить</a>
               <button class="catalog-button" type="button">В закладки</button>
             </div>
+            <del class="hidden">32500 Р.</del>
             <span class="price">12500 Р.</span>
           </article>
         </li>
@@ -332,14 +342,14 @@
       </div>
   </footer>
 
-  <section class="modal modal-feedback">
+  <section class="modal modal-feedback visually-hidden">
     <h2 class="visually-hidden">Форма обратной связи</h2>
     <!--Здесь будет форма обратной связи-->
     <button class="button" type="submit">Отправить</button>
     <button class="modal-close" type="button">Закрыть</button>
   </section>
 
-  <section class="modal modal-map">
+  <section class="modal modal-map visually-hidden">
     <h2 class="visually-hidden">Карта</h2>
     <img src="img/map_popup.jpg" width="970" height="477" alt="Схема проезда">
     <button class="modal-close" type="button">Закрыть</button>

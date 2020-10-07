@@ -1,4 +1,4 @@
-/*Fonts*/
+/*Fonts*//*
 @font-face {
   font-family: "Cuprum";
   src: local("Cuprum"),
@@ -12,7 +12,7 @@
      url("../fonts/ptsans.woff2") format("woff2"),
      url("../fonts/ptsans.woff") format("woff");
 }
-
+*/
 /*Variables*/
 
 :root {
@@ -307,15 +307,30 @@ img {
   list-style: none;
 
 }
-.header-entrance-link {
-  text-decoration: none;
+.header-entrance-list a {
   font-size: 16px;
   line-height: 18px;
+  text-decoration: none;
   color: var(--basic-blue);
+
+}
+.header-entrance-link,
+.header-registration-link {
+  display: inline-block;
+  background-color: var(--basic-white);
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 21px;
+  color: var(--basic-black);
 
 }
 .header-registration-link {
   padding: 12px 24px;
+}
+
+.header-entrance-link {
+  padding: 12px 27px 12px 45px;
 }
 
 /*активная составляющая*/
@@ -503,7 +518,8 @@ img {
   list-style: none;
 }
 .carousel-inner {
-
+  width: 620px;
+  height: 266px;
 }
 .carousel-header {
   font-size: 36px;
@@ -548,14 +564,7 @@ img {
   margin: 0;
 }
 
-/*заголовки*/
-.catalog-card h3 {
-  font-family: "PT Sans", "Arial", sans-serif;
-  font-size: 18px;
-  line-height: 20px;
-  font-weight: 700;
-  color: var(--basic-black);
-}
+
 /*фильтры и сортировка каталога*/
 .catalog-filters {
   width: 220px;
@@ -605,24 +614,68 @@ img {
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
   padding: 0;
-  margin: 20px 0 70px 0;
+  margin: 20px 0 48px 0;
   list-style: none;
 }
-.catalog-list-item {
+.catalog-card {
+  display: grid;
+  grid-template-rows: 1fr auto;
   width: 220px;
   height: 318px;
   border: 1px solid var(--basic-border);
+  margin: 0 auto;
+  padding-bottom: 21px;
   text-align: center;
   box-sizing: border-box;
 }
-/*элементы списка*/
+.catalog-card del {
+  margin: 7px 0 13px 0;
+}
+
+.hidden {
+  visibility: hidden;
+
+}
 .catalog-link {
+  display: block;
+  align-self: center;
   font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 700;
   line-height: 20px;
   color: var(--basic-black);
   text-decoration: none;
 }
+.catalog-grid h3 {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+  color: var(--basic-black);
+  margin: 0;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 0;
+  order: 1;
+}
+
+.catalog-grid {
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+.catalog-list .price {
+  display: block;
+  width: 141px;
+  height: 38px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 10px 44px 10px 32px;
+}
+.catalog-card-events-list {
+  display: none;
+}
+/*элементы списка*/
+
 
 .catalog-page .catalog-list {
   display: grid;
@@ -722,21 +775,22 @@ img {
 .brands .button {
   margin: 25px 15px;
 }
-.brands-list li {
-  background-color: var(--basic-white);
-}
+
 .brands-link {
-  display: block;
+  display: grid;
   width: 220px;
   height: 145px;
-  text-align: center;
+  align-items: center;
+  justify-content: center;
   border: 1px solid var(--basic-border);
   box-sizing: border-box;
 }
+
 /*активная составляющая для ссылок на бренды*/
 /*наведение*/
 .brands-link:focus,
 .brands-link:hover {
+  background-color: var(--basic-white);
   filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
 }
 /*клик по ссылке*/
