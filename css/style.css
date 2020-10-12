@@ -148,7 +148,7 @@ img {
 }
 /*блок-центровщик для хедера*/
 .header-container {
-  min-width: 1200px;
+  min-width: 940px;
   height: 42px;
   background-color: var(--basic-background-blue);
   color: var(--basic-white);
