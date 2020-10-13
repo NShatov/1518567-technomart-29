@@ -354,10 +354,9 @@ img {
   margin-bottom: 60px;
 }
 .site-navigation {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  display: flex;
+  justify-content: space-between;
   padding: 0 53px;
-  text-align: center;
   margin: 0;
   list-style: none;
 }
@@ -605,13 +604,14 @@ img {
   left: auto;
   right: 20px;
 }
+
 /*catalog*/
 .title-wrap {
-  display: grid;
-  grid-template-columns: 1fr auto;
+  display: flex;
+  justify-content: space-between;
   background-color: var(--basic-background-gray);
-  box-sizing: border-box;
 }
+
 .title-wrap .button {
   align-self: center;
   margin-right: 14px;
@@ -684,7 +684,7 @@ img {
   color: var(--basic-red);
   border-bottom: none;
 }
-/*список каталога*/
+/*Каталог на главной странице*/
 .catalog-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -693,72 +693,64 @@ img {
   margin: 20px 0 48px 0;
   list-style: none;
 }
-/*Каталог на главной странице*/
-.catalog-grid {
-  display: grid;
-  grid-template-rows: 1fr auto;
+/*Карточка товара*/
+.catalog-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 220px;
+  min-height: 318px;
+  border: 1px solid var(--basic-border);
+  padding-bottom: 21px;
+  text-align: center;
+  box-sizing: border-box;
 }
-
-.catalog-grid h3 {
+.catalog-card h3 {
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 20px;
   font-weight: 700;
   color: var(--basic-black);
   margin: 0;
-  margin-top: 5px;
-  margin-bottom: 5px;
   padding: 0;
-  order: 1;
 }
-
+/*
+.catalog-list-item:last-child h3 {
+  margin-bottom: 40px;
+}*/
 .catalog-link {
-  align-self: center;
+  margin: auto 0;
+  order: -1;
 }
-.catalog-card {
-  display: grid;
-  grid-template-rows: 1fr 70px;
-  width: 220px;
-  height: 318px;
-  border: 1px solid var(--basic-border);
-  margin: 0 auto;
-  padding-bottom: 21px;
-  text-align: center;
-  box-sizing: border-box;
-}
-.catalog-price {
-  display: grid;
-  grid-template-areas:
-  "delete"
-  "price";
-  grid-template-rows: 32px auto;
-}
-.catalog-price del {
+.catalog-card del {
   display: inline-block;
-  grid-area: delete;
   padding: 0;
   color: var(--delete);
   font-size: 17px;
   line-height: 18px;
   font-weight: 700;
-  margin: 7px 0 13px 0;
+  margin-bottom:13px;
 }
-
-.catalog-list .price {
+.catalog-card-price .price {
   display: block;
-  grid-area: price;
   width: 141px;
   height: 38px;
   margin: 0 auto;
   box-sizing: border-box;
   padding: 10px 44px 10px 32px;
 }
+.catalog-card-price {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 70px;
+  margin-top: 7px;
+}
 .catalog-card-events-list {
   display: none;
 }
-/*элементы списка*/
-
-
+/*Страница Каталога*/
+/*элементы списка */
 .catalog-page .catalog-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
