@@ -38,12 +38,12 @@
             </symbol>
           </svg>
           <form>
-            <button class="button-search" type="submit" aria-label="Поиск">
+            <button class="button-search" type="submit" aria-label="Поиск:">
               <svg width="17" height="17" class="button-search-icon">
                 <use xlink:href="#search-icon"/>
               </svg>
             </button>
-            <input type="text" name="search" placeholder="Поиск">
+            <input type="text" name="search" placeholder="Поиск:">
           </form>
         </div>
         <ul class="header-container-menu">
@@ -51,7 +51,7 @@
             <a class="header-link header-marker" href="">Закладки: <span>0</span></a>
           </li>
           <li>
-            <a class="header-link header-basket selection" href="">Корзина:<span>10</span></a>
+            <a class="header-link header-basket selection" href="">Корзина: <span>10</span></a>
           </li>
         </ul>
         <a class="order-link" href="">Оформить заказ</a>
@@ -80,7 +80,7 @@
           <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
             <symbol id="circle">
               <title>circle</title>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M2 1a1.99 1.99 0 110 3.97A1.99 1.99 0 012 .99z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M2 1a1.99 1.99 0 110 3.97A1.99 1.99 0 012 .99z"/>
+              <path fill="currentColor" clip-rule="evenodd" d="M2 1a1.99 1.99 0 110 3.97A1.99 1.99 0 012 .99z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M2 1a1.99 1.99 0 110 3.97A1.99 1.99 0 012 .99z"/>
             </symbol>
           </svg>
           <a class="header-entrance-person" href="">
@@ -95,10 +95,7 @@
           <ul class="header-entrance-list">
             <li>
               <a href="">Мои заказы
-                <svg width="6" height="6" class="circle">
-                  <use xlink:href="#circle"/>
-                </svg>
-              </a>
+                <svg width="6" height="6" class="circle"> <use xlink:href="#circle"/></svg></a>
             </li>
             <li>
               <a href="">Личный кабинет</a>
@@ -124,7 +121,7 @@
     <div class="container">
       <ul class="breadcrumbs-list">
         <li class="breadcrumbs-list-item">
-          <a href="index.html" class="visually-hidden">Главная</a>
+          <a class="index-link" href="index.html" aria-label="Главная"></a>
         </li>
         <li class="breadcrumbs-list-item">
           <a href="catalog.html">Каталог</a>
@@ -154,7 +151,7 @@
             <div class="catalog-sorting-wrap">
               <h2 class="catalog-title">Сортировка:</h2>
               <ul class="catalog-sorting-list">
-                <li class="catalog-sorting-item"><a href="">По цене</a></li>
+                <li class="catalog-sorting-item"><a class="active-sorting-link" href="">По цене</a></li>
                 <li class="catalog-sorting-item"><a href="">По типу</a></li>
                 <li class="catalog-sorting-item"><a href="">По функционалу</a></li>
               </ul>
@@ -400,7 +397,7 @@
               </div>
               <div>
                 <dt>Разработано&nbsp;&mdash;</dt>
-                <dd><a href="htmlacademy.ru">htmlacademy.ru</a></dd>
+                <dd><a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></dd>
               </div>
             </dl>
           </div>
