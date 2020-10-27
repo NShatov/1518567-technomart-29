@@ -514,7 +514,6 @@ img {
   position: relative;
 }
 
-/*
 .header-entrance-list li:first-child::after {
   content: "";
   position: absolute;
@@ -525,7 +524,7 @@ img {
   border-radius: 50%;
   background-color: var(--basic-blue);
 }
-*/
+
 .header-entrance-list a {
   font-size: 16px;
   line-height: 18px;
