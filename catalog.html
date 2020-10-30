@@ -37,13 +37,13 @@
               <path fill-rule="evenodd" clip-rule="evenodd" d="M13.46 12.04L17 15.6 15.59 17l-3.55-3.54a7.5 7.5 0 111.41-1.41zM7.5 2a5.5 5.5 0 10.01 11.01A5.5 5.5 0 007.5 2z"/>
             </symbol>
           </svg>
-          <form>
+          <form action="#" method="get" class="header-form">
+            <input type="text" name="search" placeholder="Поиск:">
             <button class="button-search" type="submit" aria-label="Поиск:">
               <svg width="17" height="17" class="button-search-icon">
                 <use xlink:href="#search-icon"/>
               </svg>
             </button>
-            <input type="text" name="search" placeholder="Поиск:">
           </form>
         </div>
         <ul class="header-container-menu">
@@ -87,8 +87,18 @@
             </svg>
           </a>
           <ul class="header-entrance-list">
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+              <symbol id="circle">
+                <title>circle</title>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M2 1a1.99 1.99 0 110 3.97A1.99 1.99 0 012 .99z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M2 1a1.99 1.99 0 110 3.97A1.99 1.99 0 012 .99z"/>
+              </symbol>
+            </svg>
             <li>
-              <a href="">Мои заказы</a>
+              <a href="">Мои заказы
+                <svg width="5" height="5" class="circle">
+                  <use xlink:href="#circle"/>
+                </svg>
+              </a>
             </li>
             <li>
               <a href="">Личный кабинет</a>
@@ -114,7 +124,9 @@
     <div class="container">
       <ul class="breadcrumbs-list">
         <li class="breadcrumbs-list-item">
-          <a class="index-link" href="index.html" aria-label="Главная"></a>
+          <a class="index-link" href="index.html" aria-label="Главная">
+            <svg width="14" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 8v4h4V8h2v4h4V8L7 3.52 2 8z" fill="#C1C6CE"/><path d="M13.83 6.37L12 4.75V0h-2v2.99L7.33.63 7.27.6a.47.47 0 00-.08-.05.55.55 0 00-.1-.02L7 .5l-.1.02a.46.46 0 00-.09.02L6.73.6l-.06.04-6.5 5.73a.5.5 0 00.66.75L7 1.67l6.17 5.44a.5.5 0 00.66-.75z" fill="#C1C6CE"/></svg>
+          </a>
         </li>
         <li class="breadcrumbs-list-item">
           <a href="catalog.html">Каталог</a>
@@ -346,7 +358,7 @@
     <section class="footer-navigation container">
       <h2 class="visually-hidden">Дополнительная навигация</h2>
       <div class="footer-logo">
-        <a class="logo">
+        <a class="logo" href="index.html">
           <img src="img/footer-logo.png" width="220" height="68" alt="Логотип сайта Интернет-магазина Техномарт">
         </a>
         <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br> +7 (812) 555-05-55</p>
