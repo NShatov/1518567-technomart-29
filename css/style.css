@@ -539,8 +539,7 @@ img {
 }
 /*активная составляющая*/
 /*наведение курсора*/
-.site-navigation-item a:hover,
-.site-navigation-item a:focus {
+.site-navigation-item a:hover {
   background-color: var(--basic-background-blue);
 }
 /*клик по ссылке*/
