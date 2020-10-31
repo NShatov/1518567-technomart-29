@@ -266,8 +266,7 @@ img {
   background-position: 0 0;
   opacity: 0.3;
 }
-.header-marker:hover::before,
-.header-marker:focus::before {
+.header-marker:hover::before {
   opacity: 1;
 }
 .header-marker:active::before{
@@ -289,8 +288,7 @@ img {
   background-position: 0 0;
   opacity: 0.3;
 }
-.header-basket:hover::before,
-.header-basket:focus::before {
+.header-basket:hover::before {
   opacity: 1;
 }
 .header-basket:active::before {
@@ -319,8 +317,7 @@ img {
 
 /*активная составляющая*/
 /*наведение*/
-.order-link:hover,
-.order-link:focus {
+.order-link:hover {
   background-color: var(--success);
 }
 /*клик по ссылке*/
@@ -439,26 +436,10 @@ img {
 .header-entrance-link:active .header-entranse-icon {
   fill: var(--basic-greylight);
 }
-/*
-.header-entrance-link::before {
-  content: "";
-  width: 20px;
-  height: 17px;
-  top: 12px;
-  left: 20px;
-  color: var(--basic-blue);
-  position: absolute;
-  background-image: url("../img/icon-login.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-}
-.header-entrance-link:hover::before {
-  background-position: -20px 0;
-}*/
+
 /*активная составляющая*/
 /*наведение на ссылки*/
-.header-entrance a:hover,
-.header-entrance a:focus {
+.header-entrance a:hover {
   color: var(--basic-red);
 }
 /*клик по ссылкам*/
@@ -519,19 +500,6 @@ img {
   position: relative;
 }
 
-/*
-.header-entrance-list li:first-child::after {
-  content: "";
-  position: absolute;
-  width: 5px;
-  height: 5px;
-  top: 10px;
-  right: -18px;
-  border-radius: 50%;
-  background-color: var(--basic-blue);
-}
-*/
-
 .header-entrance-list a {
   font-size: 16px;
   line-height: 18px;
@@ -544,13 +512,7 @@ img {
   right: -20px;
   fill: var(--basic-blue);
 }
-/*
-.header-entrance-list a:hover .circle {
-  fill: var(--basic-red);
-}
-.header-entrance-list a:active .circle {
-  fill: var(--basic-greylight);
-}*/
+
 /*главное меню*/
 .header-nav {
   background-color: var(--basic-blue);
@@ -618,20 +580,7 @@ img {
 .breadcrumbs-list-item:first-child {
   padding-top: 2px;
 }
-/*
-.index-link::after {
-  content: "";
-  position: absolute;
-  width: 14px;
-  height: 12px;
-  top: 4px;
-  left: 0;
-  background-image: url("../img/icon-home.png");
-  background-position: 0 0;
-  background-repeat: no-repeat;
-  cursor: pointer;
-}
-*/
+
 .breadcrumbs-list-item::before {
   content: "";
   position: absolute;
@@ -823,8 +772,7 @@ img {
   left: 24px;
 }
 /*активная составляющая*/
-.carousel-inner .button:hover,
-.carousel-inner .button:focus {
+.carousel-inner .button:hover {
   background-color: var(--hover-red);
 }
 .carousel-inner .button:active {
@@ -1224,7 +1172,7 @@ img {
 }
 
 .pagination-list a:active {
-  border: 1px solid var(--basic-red);
+  border-color: var(--basic-red);
 }
 .pagination-list .pagination-active {
   color: var(--basic-white);
