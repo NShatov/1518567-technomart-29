@@ -35,6 +35,7 @@
   --active-white: rgba(255, 255, 255, 0.3);
   --active-gray: rgba(241, 245, 247, 0.5);
   --active-gold: rgba(255, 209, 128, 0.5);
+  --active-offers: rgba(169, 169, 169, 0.3);
   --delete: #A9A9A9;
   --success: #5FBB2D;
   --social: #212A3A;
@@ -122,7 +123,7 @@ img {
 /*Grid*/
 /*добавляем всей странице высоту 100%*/
 .page {
-  height: 100vh;
+  height: 100%;
 }
 /*сетка для страницы*/
 .page-body {
@@ -150,6 +151,7 @@ img {
   margin: 0 auto;
   grid-template-columns: 220px 1fr auto 150px;
   width: 940px;
+  height: 42px;
 }
 /*оформление логотипа в хедере*/
 .header-logo {
@@ -233,6 +235,7 @@ img {
   justify-content: space-between;
   padding: 0;
   margin: 0;
+  height: 42px;
   list-style: none;
 }
 /*корзина и закладки*/
@@ -251,8 +254,7 @@ img {
   white-space: pre;
 }
 .header-marker {
-  padding-top: 2px;
- padding-left: 18px;
+padding: 9px 24px 9px 43px;
 }
 .header-marker::before {
   content: "";
@@ -273,8 +275,7 @@ img {
   opacity: 0.3;
 }
 .header-basket {
-  padding-top: 2px;
-  padding-left: 27px;
+padding: 9px 21px 9px 45px;
 }
 .header-basket::before {
   content: "";
@@ -632,13 +633,12 @@ img {
 }
 /*активная составляющая*/
 /*наведение*/
-.offers-list-item a:hover,
-.offers-list-item a:focus {
+.offers-list-item a:hover {
   background-color: var(--hover-greylight);
 }
 /*клик по ссылке*/
 .offers-list-item a:active {
-  background-color: var(--delete);
+  background-color: var(--active-offers);
 }
 /*описание предложения*/
 .offers-list-item p {
@@ -825,7 +825,9 @@ img {
   left: auto;
   right: 20px;
 }
-
+.carousel-button[disabled] {
+  cursor: default;
+}
 /*catalog*/
 .title-wrap {
   display: flex;
@@ -1008,16 +1010,16 @@ img {
 }
 
 .catalog-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
   width: 100%;
   min-height: 164px;
-  box-sizing: border-box;
   order: -1;
-  padding-top: 10px;
-  padding-right: 9px;
-  margin-bottom: auto;
+  margin: auto 0;
+}
+.catalog-link img {
+  min-height: 164px;
+  object-fit: contain;
+  vertical-align: middle;
 }
 .catalog-card del {
   display: inline-block;
@@ -1139,7 +1141,7 @@ img {
   padding: 0;
   margin: 0;
   list-style: none;
-  margin-top: 26px;
+  margin-top: 30px;
 }
 .pagination-list li {
   margin-right: 10px;
@@ -1455,7 +1457,7 @@ img {
 .description-product h2 {
   padding: 0;
   margin: 0;
-  margin-bottom: 23px;
+  margin-bottom: 25px;
 }
 
 /*footer*/
@@ -1474,18 +1476,25 @@ img {
     "logo menu"
     "logo submenu";
 }
+
 .footer-logo {
   grid-area: logo;
 }
 .footer-logo .logo {
   display: inline-block;
-  width: 220px;
+  background-color: var(--basic-red);
   height: 68px;
+  width: 220px;
+  box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+  padding: 20px 41px 25px;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: center;
 }
 .footer-navigation p {
   margin: 0;
   padding: 0;
-  padding-top: 15px;
+  padding-top: 20px;
 }
 /*меню в футере*/
 .footer-menu {
