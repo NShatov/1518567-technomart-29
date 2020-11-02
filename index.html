@@ -14,7 +14,7 @@
   @media ( min-width: 1200px ) {
     HTML {
       /* Desktop layout */
-      background-image: url( "img/Index.jpg" );
+      background-image: url( "img/Index-write-us.png" );
     }
 </style>
   <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
@@ -333,7 +333,7 @@
     <section class="footer-navigation container">
       <h2 class="visually-hidden">Дополнительная навигация</h2>
       <div class="footer-logo">
-        <a class="logo" href="">
+        <a class="logo">
           <img src="img/footer-logo.svg" width="138" height="23" alt="Логотип сайта Интернет-магазина Техномарт">
         </a>
         <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br> +7 (812) 555-05-55</p>
@@ -385,17 +385,36 @@
       </div>
   </footer>
 
-  <section class="modal modal-feedback visually-hidden">
+  <section class="modal modal-feedback">
     <h2 class="visually-hidden">Форма обратной связи</h2>
-    <!--Здесь будет форма обратной связи-->
-    <button class="button" type="submit">Отправить</button>
-    <button class="modal-close" type="button">Закрыть</button>
+    <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+      <div class="form-wrapper">
+        <div class="form-name">
+          <label for="name">Ваше имя:</label><br>
+          <input type="text" id="name" name="name" placeholder="Имя Фамилия">
+        </div>
+        <div class="form-email">
+          <label for="email">Ваш e-mail:</label><br>
+          <input type="email" id="email" name="email" placeholder="email@example.com">
+        </div>
+        <div class="form-comment">
+          <p>Текст письма:</p>
+          <textarea name="comment" id="comment-field">В свободной форме</textarea>
+        </div>
+      </div>
+      <div class="button-field">
+        <button class="button-modal button-submit" type="submit">Отправить</button>
+      </div>
+    </form>
+    <button class="modal-close" type="button" aria-label="Закрыть"></button>
   </section>
 
-  <section class="modal modal-map visually-hidden">
+  <section class="modal modal-map">
     <h2 class="visually-hidden">Карта</h2>
-    <img src="img/map_popup.jpg" width="970" height="477" alt="Схема проезда">
-    <button class="modal-close" type="button">Закрыть</button>
+    <a class="modal-map-link" href="https://goo.gl/maps/herqDBFPG63j56JfA" target="_blank">
+      <img src="img/map_popup.png" width="944" height="450" alt="Схема проезда">
+    </a>
+    <button class="modal-close" type="button" aria-label="Закрыть"></button>
   </section>
 
   </body>

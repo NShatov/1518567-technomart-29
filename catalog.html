@@ -144,9 +144,69 @@
 
         <div class="catalog-wrapper">
           <section class="catalog-filters">
-            <h2 class="catalog-title">Фильтр:</h2>
-            <form>
-              <!--Здесь будет фильтр товаров-->
+            <div class="filter-header">
+              <h2 class="catalog-title">Фильтр:</h2>
+            </div>
+            <form method="post" action="https://echo.htmlacademy.ru/">
+              <fieldset class="filter-item">
+                <legend>Цена:</legend>
+                <div class="range-filter">
+                  <div class="range-controls">
+                    <div class="scale">
+                      <div class="bar"></div>
+                    </div>
+                    <div class="toggle toggle-min" tabindex="0"></div>
+                    <div class="toggle toggle-max" tabindex="0"></div>
+                  </div>
+                  <div class="price-controls">
+                    <label class="min-price">
+                      <input type="number" name="min-price" step="100" value="0">
+                    </label>
+                    <label class="max-price">&nbsp;&mdash;&nbsp;
+                      <input type="number" name="max-price" step="100" value="3000">
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="filter-item">
+                <legend>Производители:</legend>
+                <ul>
+                  <li class="filter-option">
+                    <input class="filter-input-checkbox filter-input visually-hidden" type="checkbox" name="bosh" id="filter-bosch" checked>
+                    <label for="filter-bosch">bosch</label>
+                  </li>
+                  <li class="filter-option">
+                    <input class="filter-input-checkbox filter-input visually-hidden" type="checkbox" name="interscol" id="filter-interscol" disabled>
+                    <label for="filter-interscol">интерскол</label>
+                  </li>
+                  <li class="filter-option">
+                    <input class="filter-input-checkbox filter-input visually-hidden" type="checkbox" name="makita" id="filter-makita" checked>
+                    <label for="filter-makita">makita</label>
+                  </li>
+                  <li class="filter-option">
+                    <input class="filter-input-checkbox filter-input visually-hidden" type="checkbox" name="dewalt" id="filter-dewalt">
+                    <label for="filter-dewalt">dewalt</label>
+                  </li>
+                  <li class="filter-option">
+                    <input class="filter-input-checkbox filter-input visually-hidden" type="checkbox" name="hitachi" id="filter-hitachi">
+                    <label for="filter-hitachi">hitachi</label>
+                  </li>
+                </ul>
+              </fieldset>
+              <fieldset  class="filter-item">
+                <legend class="radio-header">Питание:</legend>
+                <ul>
+                  <li class="filter-option">
+                    <input class="filter-input-radio filter-input visually-hidden" type="radio" name="nutrition" value="battery" id="battery" checked>
+                    <label for="battery">Аккумуляторные</label>
+                  </li>
+                  <li class="filter-option">
+                    <input class="filter-input-radio filter-input visually-hidden" type="radio" name="nutrition" id="network" value="network">
+                    <label for="network">Сетевые</label>
+                  </li>
+                </ul>
+              </fieldset>
+              <input class="filter-button" type="submit" value="Показать">
             </form>
           </section>
 
@@ -410,11 +470,15 @@
       </div>
   </footer>
 
-  <section class="modal modal-add visually-hidden">
-    <h2 class="visually-hidden">Товар добавлен в корзину</h2>
-    <button class="button" type="submit">Оформить заказ</button>
-    <button class="button" type="button">Продолжить покупки</button>
-    <button class="modal-close" type="button">Закрыть</button>
+  <section class="modal modal-add">
+    <div class="modal-add-wrapper">
+      <h2>Товар добавлен в корзину!</h2>
+    <div class="button-field">
+      <button class="button-modal button-order" type="submit">Оформить заказ</button>
+      <button class="button-modal button-buy" type="button">Продолжить покупки</button>
+    </div>
+    </div>
+    <button class="modal-close" type="button" aria-label="Закрыть"></button>
   </section>
 
   </body>
