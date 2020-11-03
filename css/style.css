@@ -995,7 +995,6 @@ padding: 9px 21px 9px 45px;
   font-weight: 400;
   width: 95px;
   height: 36px;
-  padding-bottom: 7px;
   box-sizing: border-box;
   text-align: center;
   color: var(--basic-black);
@@ -1034,24 +1033,26 @@ padding: 9px 21px 9px 45px;
   top: -2px;
   width: 23px;
   height: 23px;
-  border: 3px solid var(--basic-greylight);
-  box-sizing: border-box;
+  border: 2px solid var(--basic-greylight);
   border-radius: 3px;
+  box-sizing: border-box;
 }
 /*добавление иконки выбранного чекбокса*/
-.filter-input-checkbox:checked + label::after {
+.filter-input-checkbox:checked + label::before {
   content: "";
   position: absolute;
   top: -2px;
   left: -35px;
   width: 27px;
   height: 23px;
-  background-image: url("../img/checkbox-on.png");
+  border: none;
+  background-image: url("../img/checkbox-on.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
-.filter-input-checkbox:checked:hover + label::after {
-  background-image: url("../img/checkbox-on-hover.png");
+/*стили при наведении*/
+.filter-input-checkbox:checked:hover + label::before {
+  background-image: url("../img/checkbox-on-hover.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
@@ -2071,11 +2072,13 @@ text-decoration: underline;
 .button-buy:active {
   outline: 1px solid var(--basic-red);
 }
-.button-order:hover {
+.button-order:hover,
+.button-modal:hover {
   background-color: var(--hover-red);
 }
 /*клик по кнопке*/
-.button-order:active {
+.button-order:active,
+.button-modal:active {
   background-color: var(--active-red);
   outline: none;
 }
