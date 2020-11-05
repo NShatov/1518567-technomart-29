@@ -38,12 +38,12 @@
             </symbol>
           </svg>
           <form action="#" method="get" class="header-form">
-            <input type="text" name="search" placeholder="Поиск:">
-            <button class="button-search" type="submit" aria-label="Поиск:">
+            <input type="text" id="search" name="search" placeholder="Поиск:">
+            <label for="search" class="button-search">
               <svg width="17" height="17" class="button-search-icon">
                 <use xlink:href="#search-icon"/>
               </svg>
-            </button>
+            </label>
           </form>
         </div>
         <ul class="header-container-menu">
@@ -390,11 +390,11 @@
     <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
       <div class="form-wrapper">
         <div class="form-name">
-          <label for="name">Ваше имя:</label><br>
+          <label for="name">Ваше имя:</label>
           <input type="text" id="name" name="name" placeholder="Имя Фамилия">
         </div>
         <div class="form-email">
-          <label for="email">Ваш e-mail:</label><br>
+          <label for="email">Ваш e-mail:</label>
           <input type="email" id="email" name="email" placeholder="email@example.com">
         </div>
         <div class="form-comment">

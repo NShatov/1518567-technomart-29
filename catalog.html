@@ -38,12 +38,12 @@
             </symbol>
           </svg>
           <form action="#" method="get" class="header-form">
-            <input type="text" name="search" placeholder="Поиск:">
-            <button class="button-search" type="submit" aria-label="Поиск:">
+            <input type="text" id="search" name="search" placeholder="Поиск:">
+            <label for="search" class="button-search">
               <svg width="17" height="17" class="button-search-icon">
                 <use xlink:href="#search-icon"/>
               </svg>
-            </button>
+            </label>
           </form>
         </div>
         <ul class="header-container-menu">
@@ -54,7 +54,7 @@
             <a class="header-link header-basket selection" href="">Корзина: <span>10</span></a>
           </li>
         </ul>
-        <a class="order-link" href="">Оформить заказ</a>
+        <a class="order-link" aria-label="Ссылка на оформление покупки" href="">Оформить заказ</a>
       </div>
     </div>
     <div class="header-description">
@@ -125,7 +125,7 @@
       <ul class="breadcrumbs-list">
         <li class="breadcrumbs-list-item">
           <a class="index-link" href="index.html" aria-label="Главная">
-            <svg width="14" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 8v4h4V8h2v4h4V8L7 3.52 2 8z" fill="#C1C6CE"/><path d="M13.83 6.37L12 4.75V0h-2v2.99L7.33.63 7.27.6a.47.47 0 00-.08-.05.55.55 0 00-.1-.02L7 .5l-.1.02a.46.46 0 00-.09.02L6.73.6l-.06.04-6.5 5.73a.5.5 0 00.66.75L7 1.67l6.17 5.44a.5.5 0 00.66-.75z" fill="#C1C6CE"/></svg>
+            <svg  aria-hidden="true" focusable="false" width="14" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 8v4h4V8h2v4h4V8L7 3.52 2 8z" fill="#C1C6CE"/><path d="M13.83 6.37L12 4.75V0h-2v2.99L7.33.63 7.27.6a.47.47 0 00-.08-.05.55.55 0 00-.1-.02L7 .5l-.1.02a.46.46 0 00-.09.02L6.73.6l-.06.04-6.5 5.73a.5.5 0 00.66.75L7 1.67l6.17 5.44a.5.5 0 00.66-.75z" fill="#C1C6CE"/></svg>
           </a>
         </li>
         <li class="breadcrumbs-list-item">
@@ -180,7 +180,7 @@
                     <label for="filter-interscol">интерскол</label>
                   </li>
                   <li class="filter-option">
-                    <input class="filter-input-checkbox filter-input visually-hidden" type="checkbox" name="makita" id="filter-makita" disabled checked>
+                    <input class="filter-input-checkbox filter-input visually-hidden" type="checkbox" name="makita" id="filter-makita" checked>
                     <label for="filter-makita">makita</label>
                   </li>
                   <li class="filter-option">
@@ -245,11 +245,11 @@
                 <article class="catalog-card">
                   <h3><a href="">Перфоратор BOSCH<br> BFG 6000</a></h3>
                   <a class="catalog-link" href="">
-                    <img src="img/bosh_bfg_6000.png" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
+                    <img src="img/bosh_bfg_6000.png" width="144" height="128" alt="">
                   </a>
                   <div class="catalog-card-events-list">
-                    <a class="catalog-card-button catalog-buy" href="">Купить</a>
-                    <button class="catalog-card-button catalog-bookmark" type="button">В закладки</button>
+                    <a class="catalog-card-button catalog-buy" href="" aria-label="Оформление покупки">Купить</a>
+                    <button class="catalog-card-button catalog-bookmark" type="button" aria-label="Добавление товара в закладки">В закладки</button>
                   </div>
                   <div class="catalog-card-price">
                     <del>32500 Р.</del>
@@ -261,11 +261,11 @@
                 <article class="catalog-card">
                   <h3><a href="">Перфоратор BOSCH<br> BFG 6000</a></h3>
                   <a class="catalog-link" href="">
-                    <img src="img/bosh_bfg_6000.png" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
+                    <img src="img/bosh_bfg_6000.png" width="144" height="128" alt="">
                   </a>
                   <div class="catalog-card-events-list">
-                    <a class="catalog-card-button catalog-buy" href="">Купить</a>
-                    <button class="catalog-card-button catalog-bookmark" type="button">В закладки</button>
+                    <a class="catalog-card-button catalog-buy" href="" aria-label="Оформление покупки">Купить</a>
+                    <button class="catalog-card-button catalog-bookmark" type="button" aria-label="Добавление товара в закладки">В закладки</button>
                   </div>
                   <div class="catalog-card-price">
                     <del>32500 Р.</del>
@@ -277,11 +277,11 @@
                 <article class="catalog-card">
                   <h3><a href="">Перфоратор BOSCH<br> BFG 6000</a></h3>
                   <a class="catalog-link" href="">
-                    <img src="img/bosh_bfg_6000.png" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
+                    <img src="img/bosh_bfg_6000.png" width="144" height="128" alt="">
                   </a>
                   <div class="catalog-card-events-list">
-                    <a class="catalog-card-button catalog-buy" href="">Купить</a>
-                    <button class="catalog-card-button catalog-bookmark" type="button">В закладки</button>
+                    <a class="catalog-card-button catalog-buy" href="" aria-label="Оформление покупки">Купить</a>
+                    <button class="catalog-card-button catalog-bookmark" type="button" aria-label="Добавление товара в закладки">В закладки</button>
                   </div>
                   <div class="catalog-card-price">
                     <del>32500 Р.</del>
@@ -293,11 +293,11 @@
                 <article class="catalog-card">
                   <h3><a href="">Перфоратор BOSCH<br> BFG 3000</a></h3>
                   <a class="catalog-link" href="">
-                    <img src="img/bosh_bfg_3000.png" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
+                    <img src="img/bosh_bfg_3000.png" width="127" height="112" alt="">
                   </a>
                   <div class="catalog-card-events-list">
-                    <a class="catalog-card-button catalog-buy" href="">Купить</a>
-                    <button class="catalog-card-button catalog-bookmark" type="button">В закладки</button>
+                    <a class="catalog-card-button catalog-buy" href="" aria-label="Оформление покупки">Купить</a>
+                    <button class="catalog-card-button catalog-bookmark" type="button" aria-label="Добавление товара в закладки">В закладки</button>
                   </div>
                   <div class="catalog-card-price">
                     <del>22500 Р.</del>
@@ -309,11 +309,11 @@
                 <article class="catalog-card">
                   <h3><a href="">Перфоратор BOSCH<br> BFG 6000</a></h3>
                   <a class="catalog-link" href="">
-                    <img src="img/bosh_bfg_6000.png" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
+                    <img src="img/bosh_bfg_6000.png" width="144" height="128" alt="">
                   </a>
                   <div class="catalog-card-events-list">
-                    <a class="catalog-card-button catalog-buy" href="">Купить</a>
-                    <button class="catalog-card-button catalog-bookmark" type="button">В закладки</button>
+                    <a class="catalog-card-button catalog-buy" href="" aria-label="Оформление покупки">Купить</a>
+                    <button class="catalog-card-button catalog-bookmark" type="button" aria-label="Добавление товара в закладки">В закладки</button>
                   </div>
                   <div class="catalog-card-price">
                     <del>32500 Р.</del>
@@ -325,11 +325,11 @@
                 <article class="catalog-card">
                   <h3><a href="">Перфоратор BOSCH<br> BFG 2000</a></h3>
                   <a class="catalog-link" href="">
-                    <img src="img/bosh_bfg_2000.png" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
+                    <img src="img/bosh_bfg_2000.png" width="127" height="112" alt="">
                   </a>
                   <div class="catalog-card-events-list">
-                    <a class="catalog-card-button catalog-buy" href="">Купить</a>
-                    <button class="catalog-card-button catalog-bookmark" type="button">В закладки</button>
+                    <a class="catalog-card-button catalog-buy" href="" aria-label="Оформление покупки">Купить</a>
+                    <button class="catalog-card-button catalog-bookmark" type="button" aria-label="Добавление товара в закладки">В закладки</button>
                   </div>
                   <div class="catalog-card-price">
                     <span class="price">12500 Р.</span>
@@ -340,11 +340,11 @@
                 <article class="catalog-card">
                   <h3><a href="">Перфоратор BOSCH<br> BFG 3000</a></h3>
                   <a class="catalog-link" href="">
-                    <img src="img/bosh_bfg_3000.png" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
+                    <img src="img/bosh_bfg_3000.png" width="127" height="112" alt="">
                   </a>
                   <div class="catalog-card-events-list">
-                    <a class="catalog-card-button catalog-buy" href="">Купить</a>
-                    <button class="catalog-card-button catalog-bookmark" type="button">В закладки</button>
+                    <a class="catalog-card-button catalog-buy" href="" aria-label="Оформление покупки">Купить</a>
+                    <button class="catalog-card-button catalog-bookmark" type="button" aria-label="Добавление товара в закладки">В закладки</button>
                   </div>
                   <div class="catalog-card-price">
                     <del>22500 Р.</del>
@@ -356,11 +356,11 @@
                 <article class="catalog-card">
                   <h3><a href="">Перфоратор BOSCH<br> BFG 6000</a></h3>
                   <a class="catalog-link" href="">
-                    <img src="img/bosh_bfg_6000.png" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
+                    <img src="img/bosh_bfg_6000.png" width="144" height="128" alt="">
                   </a>
                   <div class="catalog-card-events-list">
-                    <a class="catalog-card-button catalog-buy" href="">Купить</a>
-                    <button class="catalog-card-button catalog-bookmark" type="button">В закладки</button>
+                    <a class="catalog-card-button catalog-buy" href="" aria-label="Оформление покупки">Купить</a>
+                    <button class="catalog-card-button catalog-bookmark" type="button" aria-label="Добавление товара в закладки">В закладки</button>
                   </div>
                   <div class="catalog-card-price">
                     <del>32500 Р.</del>
@@ -372,11 +372,11 @@
                 <article class="catalog-card">
                   <h3><a href="">Перфоратор BOSCH<br> BFG 2000</a></h3>
                   <a class="catalog-link" href="">
-                    <img src="img/bosh_bfg_2000.png" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
+                    <img src="img/bosh_bfg_2000.png" width="127" height="112" alt="">
                   </a>
                   <div class="catalog-card-events-list">
-                    <a class="catalog-card-button catalog-buy" href="">Купить</a>
-                    <button class="catalog-card-button catalog-bookmark" type="button">В закладки</button>
+                    <a class="catalog-card-button catalog-buy" href="" aria-label="Оформление покупки">Купить</a>
+                    <button class="catalog-card-button catalog-bookmark" type="button" aria-label="Добавление товара в закладки">В закладки</button>
                   </div>
                   <div class="catalog-card-price">
                     <span class="price">12500 Р.</span>
@@ -397,7 +397,7 @@
                 <a href="">3</a>
               </li>
               <li>
-                <a class="pagination-button" href="">Следующая</a>
+                <a class="pagination-button" aria-label="Переход на следующую страницу каталога" href="">Следующая</a>
               </li>
             </ul>
           </section>
