@@ -419,6 +419,7 @@ padding: 9px 21px 9px 45px;
   box-sizing: border-box;
 }
 
+
 .header-entrance-link {
   position: relative;
   min-width: 121px;
@@ -444,11 +445,6 @@ padding: 9px 21px 9px 45px;
   fill: var(--basic-greylight);
 }
 
-/*активная составляющая*/
-/*наведение на ссылки*/
-.header-entrance a:hover {
-  color: var(--basic-red);
-}
 /*клик по ссылкам*/
 .header-entrance a:active {
   color: var(--basic-greylight);
@@ -456,42 +452,59 @@ padding: 9px 21px 9px 45px;
 /*Страница каталога*/
 /*ссылки на вход и регистрацию*/
 .header-entrance-person {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
   position: relative;
   padding: 12px 0;
   width: 299px;
   min-height: 45px;
   box-sizing: border-box;
-  color: var(--basic-black);
   font-size: 21px;
   line-height: 21px;
   font-style: normal;
-  text-align: center;
   background-color: var(--basic-white);
-  text-decoration: none;
 }
 
-.header-person-icon,
-.header-login-icon {
+.header-entrance-login {
+  text-decoration: none;
+  color: var(--basic-black);
+}
+
+.header-entrance-exit {
+  position: absolute;
+  color: var(--basic-greylight);
+  top: 14px;
+  right: 18px;
+  width: 20px;
+  height: 18px;
+}
+
+.header-exit-icon {
+  fill: currentColor;
+}
+
+.header-entrance-exit:hover {
+  color: var(--basic-grey);
+}
+
+.header-entrance-exit:active {
+  color: var(--basic-greylight);
+}
+
+
+.header-person-icon {
   position: absolute;
   fill: var(--basic-greylight);
-}
-.header-person-icon {
   top: 13px;
   left: 15px;
 }
-.header-login-icon {
-  top: 14px;
-  right: 17px;
+
+.header-person-icon:hover {
+  fill: var(--basic-grey);
 }
 
-.header-entrance-person:hover .header-person-icon,
-.header-entrance-person:hover .header-login-icon {
-  fill: var(--basic-blue);
-}
-
-.header-entrance-person:active .header-person-icon,
-.header-entrance-person:active .header-login-icon {
+.header-entrance-login:active,
+.header-person-icon:active {
   fill: var(--basic-greylight);
 }
 
@@ -513,6 +526,15 @@ padding: 9px 21px 9px 45px;
   text-decoration: none;
   color: var(--basic-blue);
 }
+
+.header-entrance-list a:hover {
+  color: var(--basic-red);
+}
+
+.header-entrance-list a:active {
+  color: var(--basic-greylight);
+}
+
 .circle {
   position: absolute;
   top: 9px;
@@ -1898,6 +1920,11 @@ text-decoration: underline;
 }
 .modal-show {
   display: block;
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
 }
 .modal-feedback {
   bottom: 250px;
@@ -2013,7 +2040,6 @@ text-decoration: underline;
 .modal-map {
   width: 943px;
   height: 449px;
-  display: none;
 }
 /**/
 .modal-map-link {
@@ -2023,6 +2049,9 @@ text-decoration: underline;
   width: 943px;
   height: 449px;
   display: block;
+}
+.modal-map iframe {
+  border: none;
 }
 /*Модальное окно - добавления товара в корзину*/
 .modal-add {
@@ -2095,4 +2124,47 @@ text-decoration: underline;
   background-image: url(../img/icon-close.png);
   background-position: 0 0;
   background-repeat: no-repeat;
+}
+.modal-close:active {
+  outline: none;
+}
+/*Animation*/
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }

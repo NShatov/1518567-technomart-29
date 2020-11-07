@@ -54,7 +54,7 @@
             <a class="header-link header-basket" href="">Корзина: <span>0</span></a>
           </li>
         </ul>
-        <a class="order-link" href="" aria-label="Ссылка на оформление покупки">Оформить заказ</a>
+        <a class="order-link" href="order.html" aria-label="Ссылка на оформление покупки">Оформить заказ</a>
       </div>
     </div>
     <div class="header-description">
@@ -71,11 +71,11 @@
               <path d="M14.88 8.5L6 0v6H0v5h6v6l8.88-8.5z"/><path d="M16.99 15.01h-5.03V17h5.03c2.17 0 3-1.81 3.03-3.03V3.03C19.98 1.8 19.16 0 16.98 0h-5.03v1.99h5.03c.84 0 .99.68 1 1.06v10.9c-.01.38-.16 1.06-1 1.06z"/>
             </symbol>
           </svg>
-          <a class="header-entrance-link" href="">
+          <a class="header-entrance-link" href="login.html">
             <svg width="21" height="17" class="header-entranse-icon">
             <use xlink:href="#entrance-icon"/>
           </svg>Войти</a>
-          <a class="header-registration-link" href="">Регистрация</a>
+          <a class="header-registration-link" href="registration.html">Регистрация</a>
         </div>
       </div>
     </div>
@@ -120,7 +120,7 @@
           </li>
           <li class="offers-list-item">
             <ul class="carousel-list">
-              <li class="carousel-inner">
+              <li class="carousel-inner perforators carousel-active">
                 <h3 class="carousel-header">Перфораторы</h3>
                 <p class="carousel-description">Настоящие мужские игрушки</p>
                 <img src="img/perforator.jpg" width="620" height="266" alt="Демонстрация работы перфоратора">
@@ -130,9 +130,9 @@
                   <div class="indicator"></div>
                 </div>
                 <button class="carousel-button carousel-button-prev" type="button" disabled aria-label="Назад"></button>
-                <button class="carousel-button carousel-button-next" type="button" aria-label="Вперед"></button>
+                <button class="carousel-button carousel-button-next active-next" type="button" aria-label="Вперед"></button>
               </li>
-              <li class="carousel-inner carousel-active">
+              <li class="carousel-inner drills">
                 <h3 class="carousel-header">Дрели</h3>
                 <p class="carousel-description">Соседям на радость!</p>
                 <img src="img/drill.jpg" width="620" height="266" alt="Демонстрация работы дрели">
@@ -141,7 +141,7 @@
                   <div class="indicator"></div>
                   <div class="indicator indicator-active"></div>
                 </div>
-                <button class="carousel-button carousel-button-prev" type="button" aria-label="Назад"></button>
+                <button class="carousel-button carousel-button-prev active-prev" type="button" aria-label="Назад"></button>
                 <button class="carousel-button carousel-button-next" type="button" disabled arial-label="Вперед"></button>
               </li>
             </ul>
@@ -323,8 +323,10 @@
       <section class="contacts">
         <h3 class="title">Контакты</h3>
         <p>Вы можете забрать товар сами,<br> заехав в наш офис:</p>
-        <img src="img/map.jpg" width="300" height="158" alt="Отметка офиса на карте города">
-        <a class="button" href="" aria-label="Форма обратной связи">Заблудились? Напишите нам!</a>
+        <a class="map-link" href="https://goo.gl/maps/herqDBFPG63j56JfA" aria-label="переход на google.maps" target="_blank">
+          <img src="img/map.jpg" width="300" height="158" alt="Отметка офиса на карте города">
+        </a>
+        <a class="button feedback-button" href="feedback.html" aria-label="Форма обратной связи">Заблудились? Напишите нам!</a>
       </section>
     </div>
   </main>
@@ -391,15 +393,15 @@
       <div class="form-wrapper">
         <div class="form-name">
           <label for="name">Ваше имя:</label>
-          <input type="text" id="name" name="name" placeholder="Имя Фамилия">
+          <input class="login-name" type="text" id="name" name="name" placeholder="Имя Фамилия">
         </div>
         <div class="form-email">
-          <label for="email">Ваш e-mail:</label>
+          <label class="login-email" for="email">Ваш e-mail:</label>
           <input type="email" id="email" name="email" placeholder="email@example.com">
         </div>
         <div class="form-comment">
           <p>Текст письма:</p>
-          <textarea name="comment" id="comment-field" placeholder="В свободной форме"></textarea>
+          <textarea class="comment-feedback" name="comment" id="comment-field" placeholder="В свободной форме"></textarea>
         </div>
       </div>
       <div class="button-field">
@@ -411,11 +413,10 @@
 
   <section class="modal modal-map">
     <h2 class="visually-hidden">Карта</h2>
-    <a class="modal-map-link" href="https://goo.gl/maps/herqDBFPG63j56JfA" target="_blank">
-      <img src="img/map_popup.png" width="944" height="450" alt="Схема проезда">
-    </a>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651586!2d30.320894616097!3d59.938794181876254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1604688467506!5m2!1sru!2sru" width="944" height="450" allowfullscreen="" title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
     <button class="modal-close" type="button" aria-label="Закрыть"></button>
   </section>
 
+ <script src="js/script.js"></script>
   </body>
 </html>
