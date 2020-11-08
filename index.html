@@ -5,22 +5,8 @@
   <title>HTML Academy: Техномарт</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-  HTML {
-    background-repeat: no-repeat;
-    background-position:  50% 0;
-  }
-  /* Desktop */
-  @media ( min-width: 1200px ) {
-    HTML {
-      /* Desktop layout */
-      background-image: url( "img/Index-write-us.png" );
-    }
-</style>
-  <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
-  <script src="../node_modules/pixel-glass/script.js"></script>
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body class="page-body">
@@ -132,7 +118,7 @@
                 <button class="carousel-button carousel-button-prev" type="button" disabled aria-label="Назад"></button>
                 <button class="carousel-button carousel-button-next active-next" type="button" aria-label="Вперед"></button>
               </li>
-              <li class="carousel-inner drills carousel-hidden">
+              <li class="carousel-inner drills">
                 <h3 class="carousel-header">Дрели</h3>
                 <p class="carousel-description">Соседям на радость!</p>
                 <img src="img/drill.jpg" width="620" height="266" alt="Демонстрация работы дрели">
@@ -281,20 +267,20 @@
         <div class="services-wrapper">
           <ul class="services-list">
             <li class="services-item">
-              <button class="services-link active-link" aria-label="Информация о доставке товара">Доставка</button>
+              <button class="services-link delivery-btn active-link" aria-label="Информация о доставке товара">Доставка</button>
             </li>
             <li class="services-item">
-              <button class="services-link" aria-label="Информация о гарантии на товар">Гарантия</button>
+              <button class="services-link guarantee-btn" aria-label="Информация о гарантии на товар">Гарантия</button>
             </li>
             <li class="services-item">
-              <button class="services-link" aria-label="Информация о возможности оформить кредит на товар">Кредит</button>
+              <button class="services-link credit-btn" aria-label="Информация о возможности оформить кредит на товар">Кредит</button>
             </li>
           </ul>
-          <div class="services-section delivery">
+          <div class="services-section delivery services-active">
             <h3 class="services-header">Доставка</h3>
             <p>Мы с удовольствием доставим ваш товар прямо<br> к вашему подъезду совершенно бесплатно!<br> Ведь мы неплохо заработаем,<br> поднимая его на ваш этаж!</p>
           </div>
-          <div class="services-section guarantee services-active">
+          <div class="services-section guarantee">
             <h3 class="services-header">Гарантия</h3>
             <p>Если купленный у нас товар поломается или заискрит,<br> а также в случае пожара, спровоцированного его<br> возгоранием,  вы всегда можете быть уверены в нашей<br> гарантии. Мы обменяем сгоревший товар на новый.<br> Дом уж восстановите как-нибудь сами.</p>
           </div>
@@ -417,6 +403,6 @@
     <button class="modal-close" type="button" aria-label="Закрыть"></button>
   </section>
 
- <script src="js/script.js"></script>
+<script src="js/script.min.js"></script>
   </body>
 </html>

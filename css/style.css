@@ -425,13 +425,17 @@ padding: 9px 21px 9px 45px;
   min-width: 121px;
   padding: 11px 26px 12px 46px;
 }
+
 .header-registration-link {
   padding: 11px 0;
   min-width: 150px;
   text-align: center;
   margin-left: 10px;
 }
-
+.header-entrance-link:hover,
+.header-registration-link:hover {
+  color: var(--basic-red);
+}
 .header-entranse-icon {
   position: absolute;
   top: 12px;
@@ -439,7 +443,7 @@ padding: 9px 21px 9px 45px;
   fill: var(--basic-greylight);
 }
 .header-entrance-link:hover .header-entranse-icon {
-  fill: var(--basic-blue);
+  fill: var(--basic-grey);
 }
 .header-entrance-link:active .header-entranse-icon {
   fill: var(--basic-greylight);
@@ -787,13 +791,12 @@ padding: 9px 21px 9px 45px;
   position: relative;
   width: 620px;
   height: 266px;
+  display: none;
 }
 .carousel-active {
   display: block;
 }
-.carousel-hidden {
-  display: none;
-}
+
 .carousel-inner .button {
   position: absolute;
   bottom: 27px;
@@ -832,22 +835,21 @@ padding: 9px 21px 9px 45px;
 }
 
 .carousel-button {
-  position: absolute;
-  bottom: 104px;
-  left: 24px;
-  cursor: pointer;
-  border: none;
-}
-.carousel-button {
   content: "";
   position: absolute;
   width: 23px;
   height: 41px;
+  bottom: 104px;
+  left: 24px;
   cursor: pointer;
+  border: none;
   background-color: transparent;
   background-image: url("../img/icon-left.png");
   background-position: 0 0;
   background-repeat: no-repeat;
+}
+.carousel-button:active {
+  outline: none;
 }
 .carousel-button-next {
   transform: rotate(180deg);
@@ -1542,6 +1544,10 @@ padding: 9px 21px 9px 45px;
   color: var(--basic-white);
 }
 
+.services-link:active {
+  outline: none;
+}
+
 /*индикатор активности*/
 .active-link {
   background-color: var(--basic-white);
@@ -1563,7 +1569,7 @@ padding: 9px 21px 9px 45px;
 /*добавление фоновых изображений*/
 .delivery {
   background-image: url(../img/delivery.png);
-  background-position: 100% -30%;
+  background-position: 87% 100%;
   background-repeat: no-repeat;
 }
 
@@ -1578,11 +1584,9 @@ padding: 9px 21px 9px 45px;
   background-position: 95% 3%;
   background-repeat: no-repeat;
 }
-/*.credit p {
-  padding-bottom: 16px;
-}*/
+
 .credit .button {
-  margin-top: 15px;
+  margin-top: 30px;
   width: 195px;
   border-radius: 2px;
 }
@@ -1765,8 +1769,7 @@ padding: 9px 21px 9px 45px;
   text-decoration: underline;
 }
 /*клик*/
-.footer-menu-item a:active
- {
+.footer-menu-item a:active {
   color: var(--active-gray);
   text-decoration: none;
 }
