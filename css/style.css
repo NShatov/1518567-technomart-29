@@ -2095,18 +2095,18 @@ text-decoration: underline;
 .button-order {
   margin-right: 10px;
 }
-.button-buy {
+.button-modal + .button-buy {
   color: var(--basic-black);
   background-color: var(--basic-white);
 }
-.button-buy:focus,
-.button-buy:hover {
-  outline: 1px solid var(--basic-greylight);
-}
-
-.button-buy:active {
+.button-modal + .button-buy:hover,
+.button-modal + .button-buy:focus,
+.button-modal + .button-buy:active {
+  color: var(--basic-black);
+  background-color: var(--basic-white);
   outline: 1px solid var(--basic-red);
 }
+
 .button-order:hover,
 .button-modal:hover {
   background-color: var(--hover-red);
